@@ -14,19 +14,3 @@ export async function booksApi() {
 }
 
 console.log(booksApi());
-
-export async function booksApibyCategory(category) {
-    const BASE_URL = 'https://books-backend.p.goit.global/books/category';
-
-    const options = {
-        method: 'GET',
-        params: {
-            category: category,
-        },
-    };
-
-    const res = await axios.get(BASE_URL, options);
-    return res.data;
-}
-
-console.log(booksApibyCategory('Combined Print and E-Book Nonfiction'));

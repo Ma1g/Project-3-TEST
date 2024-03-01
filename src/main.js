@@ -97,34 +97,34 @@ import axios from 'axios';
 
 //!======== Шаг №6 ==== меняем <li> на <p> === с комментарием ===========================================
 
-import { booksApi } from './render';
+// import { booksApi } from './render';
 
-document.addEventListener("DOMContentLoaded", function () { // Слушаем событие загрузки DOM
-    const categoryList = document.getElementById("category-list"); // Получаем элемент списка категорий по его id
+// document.addEventListener("DOMContentLoaded", function () { // Слушаем событие загрузки DOM
+//     const categoryList = document.getElementById("category-list"); // Получаем элемент списка категорий по его id
 
-    booksApi().then(categories => { // Вызываем функцию booksApi, которая возвращает промис с категориями
-        categories.forEach(function (category) { // Проходимся по каждой категории
-            const paragraph = document.createElement('p'); // Используем тег р вместо li
-            paragraph.textContent = category.list_name; // Задаем текст элемента р равным названию категории
+//     booksApi().then(categories => { // Вызываем функцию booksApi, которая возвращает промис с категориями
+//         categories.forEach(function (category) { // Проходимся по каждой категории
+//             const paragraph = document.createElement('p'); // Используем тег р вместо li
+//             paragraph.textContent = category.list_name; // Задаем текст элемента р равным названию категории
 
-            paragraph.addEventListener('click', function () {      // Добавляем обработчик клика на элемент р
-                document.getElementById('container').innerHTML = ''; // Очищаем содержимое элемента с id 'container'
+//             paragraph.addEventListener('click', function () {      // Добавляем обработчик клика на элемент р
+//                 document.getElementById('container').innerHTML = ''; // Очищаем содержимое элемента с id 'container'
 
-                booksApibyCategory(category.list_name).then(books => { // Вызываем функцию booksApibyCategory с названием категории в качестве аргумента
-                    books.forEach(book => { // Перебираем каждую книгу в полученном списке книг
-                        const bookElement = document.createElement('div'); // Создаем новый элемент div для отображения информации о книге
-                        bookElement.textContent = book.title; // Задаем текст элемента равным названию книги
-                        document.getElementById('container').appendChild(bookElement);  // Добавляем созданный элемент div в контейнер с id 'container'
-                    });
-                });
-            });
+//                 booksApibyCategory(category.list_name).then(books => { // Вызываем функцию booksApibyCategory с названием категории в качестве аргумента
+//                     books.forEach(book => { // Перебираем каждую книгу в полученном списке книг
+//                         const bookElement = document.createElement('div'); // Создаем новый элемент div для отображения информации о книге
+//                         bookElement.textContent = book.title; // Задаем текст элемента равным названию книги
+//                         document.getElementById('container').appendChild(bookElement);  // Добавляем созданный элемент div в контейнер с id 'container'
+//                     });
+//                 });
+//             });
 
-            categoryList.appendChild(paragraph); // Добавляем созданный элемент р в список категорий
-        });
-    }).catch(error => {
-        console.error('Error fetching data;', error);
-    });
-});
+//             categoryList.appendChild(paragraph); // Добавляем созданный элемент р в список категорий
+//         });
+//     }).catch(error => {
+//         console.error('Error fetching data;', error);
+//     });
+// });
 
 //!======== Шаг №6 ==== меняем <li> на <p> ===============================================
 
@@ -138,7 +138,8 @@ document.addEventListener("DOMContentLoaded", function () { // Слушаем с
 //             const paragraph = document.createElement('p');
 //             paragraph.textContent = category.list_name;
 
-//             paragraph.addEventListener('click', function () {
+//             paragraph.addEventListener('click', function (event) {
+//                 event.preventDefault();
 //                 document.getElementById('container').innerHTML = '';
 //                 booksApibyCategory(category.list_name).then(books => {
 //                     books.forEach(book => {
@@ -159,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () { // Слушаем с
 //!======== Шаг №7 ==== добавл "ALL CATEGORIES" в начало списка  ===============================================
 
 import { booksApi } from './render';
-
+//import { loadBooks } from './render';// Внести в проект
 document.addEventListener("DOMContentLoaded", function () {
     const categoryList = document.getElementById("category-list");
 
@@ -185,11 +186,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
 
-            categoryList.appendChild(paragraph);
+            categoryList.appendChild(paragraph); // Добавляем элемент в список внутри цикла
         });
     }).catch(error => {
         console.error('Error fetching data;', error);
     });
 });
-
-
