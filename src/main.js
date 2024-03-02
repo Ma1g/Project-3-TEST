@@ -195,6 +195,28 @@ import axios from 'axios';
 
 //!======== Шаг №8 ==== замена перв addEventListener на window.onload == отрисовка списка <p> по новому ======================
 
+// import { booksApi } from './render';
+// import { loadBooks } from './render';
+// window.onload = function () {
+//     const categoryList = document.getElementById("category-list"); //сылка на список категорий
+//     const title = document.createElement('li');
+//     title.textContent = "ALL CATEGORIES";
+//     title.id = "title";
+//     categoryList.appendChild(title);
+//     booksApi().then(categories => { // Вызываем функцию booksApi, которая возвращает промис с категориями
+//         categories.forEach(function (category) { // Проходимся по каждой категории
+//             const paragraph = document.createElement('p'); // создаем <p> для кажд элем списка
+//             paragraph.textContent = category.list_name;
+//             paragraph.id = "p-list";
+//             categoryList.appendChild(paragraph); // Добавляем элемент в список внутри цикла
+//         });
+//     }).catch(error => {
+//         console.error('Error fetching data;', error);
+//     });
+//     paragraph.addEventListener('click', loadBooks); //Вызываем функцию loadBooks при клике на элемент
+// };
+//!======== Шаг №9 ======= вернул paragraph.addEvent на место =========================================================================================
+
 import { booksApi } from './render';
 import { loadBooks } from './render';
 window.onload = function () {
@@ -208,28 +230,11 @@ window.onload = function () {
             const paragraph = document.createElement('p'); // создаем <p> для кажд элем списка
             paragraph.textContent = category.list_name;
             paragraph.id = "p-list";
+            paragraph.addEventListener('click', loadBooks); //Вызываем функцию loadBooks при клике на элемент
             categoryList.appendChild(paragraph); // Добавляем элемент в список внутри цикла
         });
     }).catch(error => {
         console.error('Error fetching data;', error);
     });
-    paragraph.addEventListener('click', loadBooks); //Вызываем функцию loadBooks при клике на элемент
+
 };
-//!======== Шаг №9 ================================================================================================
-// import { booksApi } from './render';
-// import { loadBooks } from './render';
-
-// window.onload = function () {
-//     const categoryList = document.getElementById("category-list");
-
-//     booksApi().then(categories => {
-//         categories.forEach(function (category) {
-//             const listItem = document.createElement('li');
-//             listItem.textContent = category.list_name;
-//             categoryList.appendChild(listItem);
-//         });
-//     }).catch(error => {
-//         console.error('Error fetching data:', error);
-//     });
-// };
-
