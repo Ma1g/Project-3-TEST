@@ -29,11 +29,11 @@
   --white: #fff;
 }
 
+/** MOBILE CSS */
 .slider-container {
 
   overflow-y: auto;
   height: 100%;
-  border: 1px solid #ccc;
 }
 
 .slider-container ul {
@@ -42,7 +42,6 @@
 }
 
 .slider-container ul p {
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -50,9 +49,10 @@
   background-color: #f0f0f0;
 }
 
+/** ================================================================= */
 #category-list {
-  width: 356px;
-  height: 472px;
+  width: 307px;
+  height: 228px;
   overflow-y: auto;
   margin-top: 20px;
 }
@@ -62,34 +62,34 @@
 }
 
 #category-list::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #e0e0e0;
   /* Цвет ползунка */
   border-radius: 12px;
   /* Скругление углов ползунка */
-  height: 167px;
+  height: 114px;
   /* Высота ползунка */
+}
+
+#title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 112%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #800080;
 }
 
 #category-list p {
   cursor: pointer;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 133%;
+  font-size: 16px;
+  line-height: 112%;
   letter-spacing: -0.02em;
   color: rgba(17, 17, 17, 0.6);
 }
 
 #p-list {
   margin-right: 20px;
-}
-
-#title {
-  margin-bottom: 32px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 133%;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: #800080;
 }
