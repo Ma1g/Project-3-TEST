@@ -32,30 +32,23 @@
 .slider-container {
 
   overflow-y: auto;
-  /* Разрешить вертикальную прокрутку */
   height: 100%;
-  /* Фиксированная высота контейнера */
   border: 1px solid #ccc;
-  /* Границы для визуального отображения */
 }
 
 .slider-container ul {
   list-style-type: none;
-  /* Убираем маркеры списка */
   padding: 0;
 }
 
 .slider-container ul p {
   padding: 10px;
   border-bottom: 1px solid #ddd;
-  /* Разделители между категориями */
   cursor: pointer;
-  /* Изменяем указатель при наведении на элемент */
 }
 
 .slider-container ul p:hover {
   background-color: #f0f0f0;
-  /* Изменяем цвет фона при наведении */
 }
 
 #category-list {

@@ -208,13 +208,12 @@ window.onload = function () {
             const paragraph = document.createElement('p'); // создаем <p> для кажд элем списка
             paragraph.textContent = category.list_name;
             paragraph.id = "p-list";
-
-            paragraph.addEventListener('click', function () {
-                loadBooks(category.list_name); //Вызываем функцию loadBooks при клике на элемент
-            });
             categoryList.appendChild(paragraph); // Добавляем элемент в список внутри цикла
         });
     }).catch(error => {
         console.error('Error fetching data;', error);
     });
+    paragraph.addEventListener('click', loadBooks); //Вызываем функцию loadBooks при клике на элемент
 };
+//!======== Шаг №9 ================================================================================================
+
