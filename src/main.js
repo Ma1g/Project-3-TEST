@@ -216,4 +216,20 @@ window.onload = function () {
     paragraph.addEventListener('click', loadBooks); //Вызываем функцию loadBooks при клике на элемент
 };
 //!======== Шаг №9 ================================================================================================
+// import { booksApi } from './render';
+// import { loadBooks } from './render';
+
+// window.onload = function () {
+//     const categoryList = document.getElementById("category-list");
+
+//     booksApi().then(categories => {
+//         categories.forEach(function (category) {
+//             const listItem = document.createElement('li');
+//             listItem.textContent = category.list_name;
+//             categoryList.appendChild(listItem);
+//         });
+//     }).catch(error => {
+//         console.error('Error fetching data:', error);
+//     });
+// };
 
