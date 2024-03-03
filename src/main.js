@@ -264,10 +264,13 @@ import axios from 'axios';
 //         console.error('Error fetching data;', error);
 //     });
 // };
-//!======== Шаг №11 ================================================
+//!======== Шаг №11 === добавл код от Марии =============================================
 
 import { booksApi } from './render';
 import { loadBooks } from './render';
+
+const categoryBlock = document.querySelector("#category-list");
+export default categoryBlock;
 
 window.onload = function () {
     const myCategoryList = document.getElementById("category-list");
