@@ -236,5 +236,31 @@ window.onload = function () {
     }).catch(error => {
         console.error('Error fetching data;', error);
     });
-
 };
+
+//!======== Шаг №10 === добавл .active для смены цвета на <p> ========================================================
+
+// import { booksApi } from './render';
+// import { loadBooks } from './render';
+// window.onload = function () {
+//     const categoryList = document.getElementById("category-list"); //сылка на список категорий
+//     const title = document.createElement('li');
+//     title.textContent = "ALL CATEGORIES";
+//     title.id = "title";
+//     categoryList.appendChild(title);
+//     booksApi().then(categories => { // Вызываем функцию booksApi, которая возвращает промис с категориями
+//         categories.forEach(function (category) {
+//             const paragraph = document.createElement('p');
+//             paragraph.textContent = category.list_name;
+//             paragraph.id = "p-list";
+//             categoryList.appendChild(paragraph);
+//             // обработчик событий 'click', который вызывает функцию 'loadBooks' и добавляет класс 'active'
+//             paragraph.addEventListener('click', function () {
+//                 paragraph.classList.add('active');
+//                 loadBooks();
+//             });
+//         });
+//     }).catch(error => {
+//         console.error('Error fetching data;', error);
+//     });
+// };

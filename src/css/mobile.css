@@ -90,6 +90,15 @@
   color: rgba(17, 17, 17, 0.6);
 }
 
+#category-list p:hover {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #800080;
+}
+
 #p-list {
   margin-right: 20px;
 }
