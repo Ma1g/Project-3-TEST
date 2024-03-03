@@ -217,26 +217,26 @@ import axios from 'axios';
 // };
 //!======== Шаг №9 ======= вернул paragraph.addEvent на место =========================================================================================
 
-import { booksApi } from './render';
-import { loadBooks } from './render';
-window.onload = function () {
-    const categoryList = document.getElementById("category-list"); //сылка на список категорий
-    const title = document.createElement('li');
-    title.textContent = "ALL CATEGORIES";
-    title.id = "title";
-    categoryList.appendChild(title);
-    booksApi().then(categories => { // Вызываем функцию booksApi, которая возвращает промис с категориями
-        categories.forEach(function (category) { // Проходимся по каждой категории
-            const paragraph = document.createElement('p'); // создаем <p> для кажд элем списка
-            paragraph.textContent = category.list_name;
-            paragraph.id = "p-list";
-            paragraph.addEventListener('click', loadBooks); //Вызываем функцию loadBooks при клике на элемент
-            categoryList.appendChild(paragraph); // Добавляем элемент в список внутри цикла
-        });
-    }).catch(error => {
-        console.error('Error fetching data;', error);
-    });
-};
+// import { booksApi } from './render';
+// import { loadBooks } from './render';
+// window.onload = function () {
+//     const categoryList = document.getElementById("category-list"); //сылка на список категорий
+//     const title = document.createElement('li');
+//     title.textContent = "ALL CATEGORIES";
+//     title.id = "title";
+//     categoryList.appendChild(title);
+//     booksApi().then(categories => { // Вызываем функцию booksApi, которая возвращает промис с категориями
+//         categories.forEach(function (category) { // Проходимся по каждой категории
+//             const paragraph = document.createElement('p'); // создаем <p> для кажд элем списка
+//             paragraph.textContent = category.list_name;
+//             paragraph.id = "p-list";
+//             paragraph.addEventListener('click', loadBooks); //Вызываем функцию loadBooks при клике на элемент
+//             categoryList.appendChild(paragraph); // Добавляем элемент в список внутри цикла
+//         });
+//     }).catch(error => {
+//         console.error('Error fetching data;', error);
+//     });
+// };
 
 //!======== Шаг №10 === добавл .active для смены цвета на <p> ========================================================
 
@@ -264,3 +264,26 @@ window.onload = function () {
 //         console.error('Error fetching data;', error);
 //     });
 // };
+//!======== Шаг №11 ================================================
+
+import { booksApi } from './render';
+import { loadBooks } from './render';
+
+window.onload = function () {
+    const myCategoryList = document.getElementById("category-list");
+    const title = document.createElement('li');
+    title.textContent = "ALL CATEGORIES";
+    title.id = "title";
+    myCategoryList.appendChild(title);
+    booksApi().then(categories => {
+        categories.forEach(function (category) {
+            const paragraph = document.createElement('p'); // создаем <p> для кажд элем списка
+            paragraph.textContent = category.list_name;
+            paragraph.id = "p-list";
+            paragraph.addEventListener('click', loadBooks); //Вызываем функцию loadBooks при клике на элемент
+            myCategoryList.appendChild(paragraph);
+        });
+    }).catch(error => {
+        console.error('Error fetching data;', error);
+    });
+};
