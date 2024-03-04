@@ -269,22 +269,22 @@ import axios from 'axios';
 import { booksApi } from './render';
 import { loadBooks } from './render';
 
-const categoryBlock = document.querySelector("#category-list");
-export default categoryBlock;
+const categoryBlock = document.querySelector("#category-list"); // Получаем элемент с id "category-list"
+export default categoryBlock; // Экспортируем categoryBlock как default
 
-window.onload = function () {
-    const myCategoryList = document.getElementById("category-list");
-    const title = document.createElement('li');
-    title.textContent = "ALL CATEGORIES";
-    title.id = "title";
-    myCategoryList.appendChild(title);
-    booksApi().then(categories => {
-        categories.forEach(function (category) {
+window.onload = function () { // Когда окно загрузится, выполниться следующая функция
+    const myCategoryList = document.getElementById("category-list"); // Получаем элемент с id "category-list"
+    const title = document.createElement('li'); // Создаем новый элемент списка 'li'
+    title.textContent = "ALL CATEGORIES"; // Устанавливаем текст элемента
+    title.id = "title"; // Устанавливаем id элемента
+    myCategoryList.appendChild(title); // Добавляем созданный элемент в список
+    booksApi().then(categories => {  // Вызываем функцию booksApi и обрабатываем промис
+        categories.forEach(function (category) { // Для каждой категории выполняем функцию
             const paragraph = document.createElement('p'); // создаем <p> для кажд элем списка
-            paragraph.textContent = category.list_name;
-            paragraph.id = "p-list";
+            paragraph.textContent = category.list_name; // Устанавливаем текст элемента равным имени категории
+            paragraph.id = "p-list"; // Устанавливаем id элемента
             paragraph.addEventListener('click', loadBooks); //Вызываем функцию loadBooks при клике на элемент
-            myCategoryList.appendChild(paragraph);
+            myCategoryList.appendChild(paragraph); // Добавляем созданный элемент в список
         });
     }).catch(error => {
         console.error('Error fetching data;', error);
