@@ -30,3 +30,18 @@ export async function loadBooks(category) {
 }
 
 console.log(loadBooks('Combined Print and E-Book Nonfiction'));
+
+export async function loadBooksAllCat() {
+    try {
+        const categories = await categoryList();
+        for (const category of categories) {
+            console.log(`Category: ${category.list_name}`);
+            const data = await topBooks(category.list_name);
+            renderBooksAll(data, category.list_name);
+            console.log('Books:');
+            console.log(data);
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+};
