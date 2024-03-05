@@ -382,6 +382,11 @@ window.onload = function () {
     const title = document.createElement('li');
     title.textContent = 'ALL CATEGORIES';
     title.id = 'title';
+    // ! ===================================================
+    title.addEventListener('click', function () {
+        window.location.href = './index.html'; // Перенаправление на главную страницу
+    });
+    // ! ===================================================
     myCategoryList.appendChild(title);
     categoryList()
         .then(categories => {
@@ -406,6 +411,5 @@ categoryBlock.addEventListener('click', async event => {
     } else if (event.target.id === 'title') {
         loadBooksAllCat();
         console.log(loadBooksAllCat());
-        // window.location.href = '/index.html';//переход на глав стр при нажатии 'title'
     }
 });
