@@ -66,6 +66,7 @@ body.dark {
 
 .header {
   /* z-index: 999; */
+  margin-bottom: 20px;
   width: 100%;
   background-color: var(--main-text-cl-dark-theme);
   border: 1.5px solid #111;
@@ -77,6 +78,7 @@ body.dark {
 }
 
 .header-container {
+  margin-bottom: 20px;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -147,7 +149,7 @@ body.dark {
 
 /*====================nav==============*/
 
-.nav {}
+
 
 .nav-list {
   margin-block-start: 1em;
@@ -301,7 +303,7 @@ body.dark {
   margin-bottom: 133px;
 }
 
-.header-modal-item {}
+
 
 .header-modal-link {
   color: var(--black, #121212);
@@ -319,7 +321,7 @@ body.dark {
   flex-shrink: 0;
 }
 
-.header-modal-img {}
+
 
 .header-menu-list {
   display: none;
@@ -328,7 +330,7 @@ body.dark {
   align-items: center;
 }
 
-.header-menu-item {}
+
 
 .header-menu-link {
   color: #FFFFFF;

@@ -292,6 +292,85 @@ import axios from 'axios';
 // };
 //!======== Шаг №12 === добавл код от Марии 2 =============================================
 
+// import { categoryList } from './render';
+// import { loadBooks } from './render';
+// import { loadBooksAllCat } from './render';
+
+// const categoryBlock = document.querySelector('#category-list');
+
+// window.onload = function () {
+//     const myCategoryList = document.getElementById('category-list');
+//     const title = document.createElement('li');
+//     title.textContent = 'ALL CATEGORIES';
+//     title.id = 'title';
+//     myCategoryList.appendChild(title);
+//     categoryList()
+//         .then(categories => {
+//             categories.forEach(function (category) {
+//                 const paragraph = document.createElement('p'); // создаем <p> для кажд элем списка
+//                 paragraph.textContent = category.list_name;
+//                 paragraph.classList.add('p-list');
+//                 myCategoryList.appendChild(paragraph);
+//             });
+//         })
+//         .catch(error => {
+//             console.error('Error fetching data;', error);
+//         });
+// };
+
+// categoryBlock.addEventListener('click', async event => {
+//     event.preventDefault();
+//     if (event.target.tagName === 'P') {
+//         const selectedCategory = event.target.textContent;
+//         loadBooks(selectedCategory);
+//     } else if (event.target.tagName === 'Li') {
+//         loadBooksAllCat();
+//     }
+// });
+
+//!======== Шаг №13 ===  Мария вариант 2 ==== здесь const myCategoryList =========================================
+
+// import { categoryList } from './render';
+// import { loadBooks } from './render';
+// import { loadBooksAllCat } from './render';
+
+// const categoryBlock = document.querySelector('#category-list');
+
+// window.onload = function () {
+//     const myCategoryList = document.getElementById('category-list');
+//     const title = document.createElement('li');
+//     title.textContent = 'ALL CATEGORIES';
+//     title.id = 'title';
+//     myCategoryList.appendChild(title);
+//     categoryList()
+//         .then(categories => {
+//             categories.forEach(function (category) {
+//                 const paragraph = document.createElement('p'); // создаем <p> для кажд элем списка
+//                 paragraph.textContent = category.list_name;
+//                 paragraph.classList.add('p-list');
+//                 myCategoryList.appendChild(paragraph);
+//             });
+//         })
+//         .catch(error => {
+//             console.error('Error fetching data;', error);
+//         });
+//     title.addEventListener('click', async event => {
+//         event.preventDefault();
+//         if (event.target.tagName === 'Li');
+//         loadBooksAllCat();
+//     });
+// };
+
+// categoryBlock.addEventListener('click', async event => {
+//     event.preventDefault();
+//     if (event.target.tagName === 'P') {
+//         const selectedCategory = event.target.textContent;
+//         loadBooks(selectedCategory);
+//     }
+// });
+
+//!======== Шаг №13 ===  Мария вариант 3 =============================================
+
 import { categoryList } from './render';
 import { loadBooks } from './render';
 import { loadBooksAllCat } from './render';
@@ -316,6 +395,7 @@ window.onload = function () {
         .catch(error => {
             console.error('Error fetching data;', error);
         });
+    loadBooksAllCat();
 };
 
 categoryBlock.addEventListener('click', async event => {
@@ -323,7 +403,9 @@ categoryBlock.addEventListener('click', async event => {
     if (event.target.tagName === 'P') {
         const selectedCategory = event.target.textContent;
         loadBooks(selectedCategory);
-    } else if (event.target.tagName === 'Li') {
+    } else if (event.target.id === 'title') {
         loadBooksAllCat();
+        console.log(loadBooksAllCat());
+        // window.location.href = '/index.html';//переход на глав стр при нажатии 'title'
     }
 });

@@ -13,11 +13,17 @@
 } */
 /**=====================================================================================================  */
 /** MOBILE CSS */
+/* .section-container {
+    margin-top: 40px;
+} */
+
 .h1 {
     margin-top: 20px;
+    background-color: aquamarine;
 }
 
 .slider-container {
+    margin-top: 40px;
     overflow-y: auto;
     /* height: 100%; */
 }
@@ -40,7 +46,7 @@
     width: 307px;
     height: 228px;
     overflow-y: auto;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 #category-list::-webkit-scrollbar {
