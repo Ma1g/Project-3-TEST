@@ -1,15 +1,7 @@
 /** MOBILE CSS */
-
-
-.h1 {
-    margin-top: 20px;
-    background-color: aquamarine;
-}
-
 .slider-container {
-    margin-top: 40px;
+    margin-bottom: 40px;
     overflow-y: auto;
-    /* height: 100%; */
 }
 
 .slider-container ul {
@@ -25,12 +17,11 @@
     background-color: #f0f0f0;
 }
 
-/** ================================================================= */
 #category-list {
     width: 307px;
     height: 228px;
     overflow-y: auto;
-    /* margin-top: 20px; */
+    margin-top: 20px;
 }
 
 #category-list::-webkit-scrollbar {
@@ -39,11 +30,8 @@
 
 #category-list::-webkit-scrollbar-thumb {
     background: #e0e0e0;
-    /* Цвет ползунка */
     border-radius: 12px;
-    /* Скругление углов ползунка */
     height: 114px;
-    /* Высота ползунка */
 }
 
 #title {
@@ -73,7 +61,12 @@
     line-height: 133%;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    color: #800080;
+    color: #4f2ee8;
+}
+
+#category-list p:hover~#title {
+    font-weight: 400;
+    /* Изменение при наведении на #category-list p:hover */
 }
 
 #p-list {
@@ -81,7 +74,6 @@
 }
 
 /**=====  TABLET ===================================================================================  */
-
 @media screen and (min-width: 768px) {
     .slider-container {
         overflow-y: auto;
@@ -109,14 +101,11 @@
         font-size: 18px;
         line-height: 133%;
     }
-
 }
 
 /**=====  FULL-SCR ===================================================================================  */
 @media screen and (min-width: 1440px) {
-
     #category-list {
         width: 328px;
     }
-
 }

@@ -1,5 +1,0 @@
-commit#1 https://github.com/Cheessse/project-team-6/commit/50c674efdf4944f1181f1f3bca896816ede3552d
-commit#2 https://github.com/Cheessse/project-team-6/pull/8/commits/e52fc1a730f9073d6e2f2e81fb9faf50801a5fc7
-commit#3 https://github.com/Cheessse/project-team-6/pull/10/commits/c23d5e9f98bfd80e7a5a9b0370f5d446b01f1167
-commit#4 https://github.com/Cheessse/project-team-6/pull/12/commits/de3a262cada3ede06bffa26f509cfdc087aa5c52
-commit#5 https://github.com/Cheessse/project-team-6/pull/14/commits/556f5d30ec92c6a9e5337c1d644fcd8c60ff588b

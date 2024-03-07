@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JS project</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/header.css" />
-  <!-- <link rel="stylesheet" href="./css/mobile.css" />
-  <link rel="stylesheet" href="./css/tablet.css" />
-  <link rel="stylesheet" href="./css/full-screen.css" /> -->
-</head>
+  <body class="light">
+    <load="partials/header.html" />
 
-<body>
-  <h1 class="h1">JS project</h1>
+    <load="partials/home-menu.html" />
 
-  <!-- category-list + header -->
-  <section class="section-cover">
-    <div class="slider-container" id="slider-container">
-      <ul id="category-list"></ul>
-    </div>
+    <load="partials/home-ukraine.html" />
 
-  </section>
+    <load="partials/home-books.html" />
 
+    <load="partials/modal-window.html" />
 
-  <script src="./main.js" type="module"></script>
-  <script src="./js/heder.js" type="module"></script>
-</body>
+    <load="partials/pagination.html" />
 
+    <load="partials/loader.html" />
+
+    <load="partials/scroll-up.html" />
+
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
