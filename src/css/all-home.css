@@ -1,0 +1,35 @@
+@media screen and (max-width: 376px) {
+  .container-home {
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 40px;
+  }
+
+  .container-home > div:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+/* .all-home {
+    display: block;
+    width: 335px;
+}
+
+.menu-double {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+} */
+
+@media screen and (max-width: 768px) {
+  .container-home {
+    /* display: flex;
+        flex-direction: row; */
+    margin-right: 26px;
+    margin-left: 26px;
+    max-width: 704px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
