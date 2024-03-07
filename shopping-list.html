@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/project-team-6/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script type="module" crossorigin src="/project-team-6/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-team-6/assets/vendor-fe837a92.js">
+    <link rel="modulepreload" crossorigin href="/project-team-6/assets/modal-window-07552cbd.js">
+    <link rel="stylesheet" href="/project-team-6/assets/vendor-2715ca0a.css">
+    <link rel="stylesheet" href="/project-team-6/assets/modal-window-a33e25ae.css">
+  </head>
+
+  <body>
+    <header id="header" class="header"> 
+    <div class="header-container"> 
+        <a href="./index.html" class="header-logo-link" label="Logo"> 
+            <svg class="header-logo" width="24" height="24"> 
+                <use href="/project-team-6/assets/symbol-defs-a993dfba.svg#icon-logo"></use> 
+            </svg>
+                <span> 
+                    <svg class="icon-Bookshelf" width="77" height="13.27">
+                        <use href="/project-team-6/assets/symbol-defs-a993dfba.svg#icon-Bookshelf"></use> 
+                    </svg>
+                </span> 
+        </a>
+
+        <nav class="nav"> 
+            <ul class="list nav-list">
+                <li class="nav-item"> 
+                        <a class="nav-link-home current-page is-hidden" href="./index.html" label="Link to home page">HOME</a> 
+                </li>
+
+                <li class="nav-item"> 
+                    <a class="nav-link-shopping is-hidden" href="" label="Link to Shopping list">SHOPPING LIST 
+                        <svg width="20" height="20"> 
+                            <use href="/project-team-6/assets/symbol-defs-a993dfba.svg#icon-shopping-bag"></use>
+                        </svg>
+                    </a> 
+                </li> 
+            </ul> 
+        </nav>
+        
+        <div class="theme-switch-menu-btn">
+            <!--<div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle"></label>
+            </div> -->
+            <div class="container-switch-black">
+                <label id="switch" class="switch-black">
+                    <input type="checkbox" id="slider" />
+                        <span class="slider-black round"></span>
+                </label>
+            </div>
+
+            <!-- <button type="button" class="header-mob-menu-btn js-open-menu" >
+                <svg width="28" height="28" class="header-menu-icon">
+                    <use href="./img/symbol-defs.svg#icon-burger"></use>
+                </svg>
+            </button> -->
+            <div class="header-mob-menu-btn js-open-menu" id="menuToggle">    
+                <svg class="header-menu-icon burger-icon" width="28" height="28">
+                  <use class="icon-burger" href="/project-team-6/assets/symbol-defs-a993dfba.svg#icon-burger" ></use>
+                </svg>
+        
+                <svg class="header-menu-icon close-icon hidden" width="28" height="28">
+                  <use class="icon-close" href="/project-team-6/assets/symbol-defs-a993dfba.svg#icon-x" ></use>
+                </svg>
+              </div> 
+        </div>
+    </div>           
+</header>
+
+    <div class="container-modal-menu js-menu-container" id="mobile-menu">
+        <div class="header-modal-menu">
+            <ul class="header-modal-list">
+                <li class="header-modal-item">
+                    <a href="./index.html"
+                        class="header-modal-link header-modal-link-one-child">HOME
+                    </a>
+                </li>
+
+                <li class="header-modal-item">
+                    <a href="" class="header-modal-link header-modal-link-shopping">SHOPPING LIST
+                        <svg width="20" height="20"> 
+                            <use href="/project-team-6/assets/symbol-defs-a993dfba.svg#icon-shopping-bag"></use>
+                        </svg>
+                    </a>
+                </li>                    
+            </ul>                  
+        </div>
+    </div>
+
+    <div class="shopping-list-main">
+      <div class="support-ukraine">
+        <aside class="sidebar">
+          <div class="block-support-ukraine">    
+    <div class="support">
+        <div class="support-title">
+            <h3 class="support-header">Support Ukraine</h3>
+            <svg width="20" height="32" class="support-icon">
+                <use href="../img/symbol-defs.svg#icon-UA_Herb"></use>
+            </svg>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <ul class="support-ukraine-list"></ul>
+            </div>
+        </div>
+        <button type="button" class="support-btn swiper-btn-next" aria-label="Scroll down">
+            <span>Scroll Down</span>
+            <svg class="support-btn-icon">
+                <use href="../img/symbol-defs.svg#icon-support-down"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+        </aside>
+      </div>
+      <div class="render-books">
+        <h1 class="shopping-list-h1">
+          Shopping <span class="shopping-list-span">List</span>
+        </h1>
+        <div class="shopping-list-render"></div>
+        <div class="shopping-list-default-div">
+          <p class="shopping-list-default-text">
+            This page is empty, add some books and proceed to order.
+          </p>
+          <picture class="shopping-list-default-picture">
+            <source
+              srcset="/project-team-6/assets/desk-books-1-d22eb9e5.png 1x, /project-team-6/assets/desk-books-2-b0d181a7.png 2x"
+              media="(min-width:1440px)"
+            />
+            <source
+              srcset="/project-team-6/assets/mob-books-1-35e5a593.png 1x, /project-team-6/assets/mob-books-2-2839fd76.png 2x"
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="/project-team-6/assets/mob-books-1-35e5a593.png 1x, /project-team-6/assets/mob-books-2-2839fd76.png 2x"
+              media="(min-width:375px)"
+            />
+            <img
+              class="shopping-list-default-img"
+              src="/project-team-6/assets/mob-books-1-35e5a593.png"
+              width="265"
+              alt="foto of books"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <body>
+    <div id="shopping-list-pagination" class="shoping-pagination"> </div>
+    <div id="tui-pagination-container" class="tui-pagination"></div>
+</body>
+    
+    
+    
+  </body>
+</html>
