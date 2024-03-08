@@ -72,9 +72,9 @@
     /* Изменение при наведении на #category-list p:hover */
 }
 
-#p-list {
-    /* padding-right: 20px; */
-}
+/* #p-list {
+    padding-right: 20px;
+} */
 
 /**=====  TABLET ===================================================================================  */
 @media screen and (min-width: 768px) {

@@ -11,26 +11,22 @@ body {
     margin-left: 20px;
 }
 
-/* .container-home>div:not(:last-child) {
-    margin-bottom: 40px;
-} */
 @media screen and (min-width: 768px) {
     .all-home {
-        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         gap: 32px;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
-
-    /* .all-home {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    .slider-container,
+    .block-support-ukraine {
         width: calc((100% - 32px) / 2);
-        width: 309px;
-        gap: 32px;
-        margin-right: 32px;
-        margin-left: 32px;
-    } */
+    }
+
+    .container {
+        width: 100%;
+        margin-top: 100px;
+    }
+
 }
