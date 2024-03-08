@@ -21,8 +21,7 @@
     flex-direction: row;
     margin: 0 26px;
     max-width: 704px;
-    justify-content: center;
-    gap: 32px;
+    justify-content: space-between;
     max-height: 474px;
   }
 }
