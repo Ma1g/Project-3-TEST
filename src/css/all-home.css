@@ -14,3 +14,23 @@ body {
 /* .container-home>div:not(:last-child) {
     margin-bottom: 40px;
 } */
+@media screen and (min-width: 768px) {
+    .all-home {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+
+    /* .all-home {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: calc((100% - 32px) / 2);
+        width: 309px;
+        gap: 32px;
+        margin-right: 32px;
+        margin-left: 32px;
+    } */
+}
