@@ -1,9 +1,16 @@
-.container-home {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 40px;
+body {
+    margin: 0;
 }
 
-.container-home>div:not(:last-child) {
-    margin-bottom: 40px;
+.all-home {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    gap: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
+
+/* .container-home>div:not(:last-child) {
+    margin-bottom: 40px;
+} */
